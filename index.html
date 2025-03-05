@@ -1,0 +1,417 @@
+<!DOCTYPE html><html class="default" lang="en" data-base="."><head><meta charset="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>FlightCore</title><meta name="description" content="Documentation for FlightCore"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script defer src="assets/main.js"></script><script async src="assets/icons.js" id="tsd-icons-script"></script><script async src="assets/search.js" id="tsd-search-script"></script><script async src="assets/navigation.js" id="tsd-nav-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os";document.body.style.display="none";setTimeout(() => app?app.showPage():document.body.style.removeProperty("display"),500)</script><header class="tsd-page-toolbar"><div class="tsd-toolbar-contents container"><div class="table-cell" id="tsd-search"><div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-search"></use></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div><div class="field"><div id="tsd-toolbar-links"></div></div><ul class="results"><li class="state loading">Preparing search index...</li><li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">FlightCore</a></div><div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-menu"></use></svg></a></div></div></header><div class="container container-main"><div class="col-content"><div class="tsd-page-title"><h1>FlightCore</h1></div><div class="tsd-panel tsd-typography"><a id="🚀-flightcore-110" class="tsd-anchor"></a><h1 class="tsd-anchor-link">🚀 FlightCore 1.1.0<a href="#🚀-flightcore-110" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h1><a id="📝-overview" class="tsd-anchor"></a><h2 class="tsd-anchor-link">📝 Overview<a href="#📝-overview" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>FlightCore 1.1.0</strong> is a sophisticated React Native application designed for Android platforms. This app provides internal users with advanced tools for real-time drone control, high-definition video streaming, and comprehensive telemetry data management. The application is built with a modular architecture, ensuring scalability, maintainability, and high performance to meet Botlab Dynamics Pvt Ltd's operational requirements.</p>
+<!-- toc-begin -->
+<a id="table-of-contents" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Table of Contents<a href="#table-of-contents" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><ol>
+<li><a href="#installation">🛠️ Installation</a></li>
+<li><a href="#usage">🎮 Usage</a></li>
+<li><a href="#features">✨ Features</a></li>
+<li><a href="#version-information">🧰 Version Information</a></li>
+<li><a href="#build-configuration">🔧 Build Configuration</a></li>
+<li><a href="#backend-folder-structure">🗂️ Backend Folder Structure</a></li>
+<li><a href="#frontend-folder-structure">🗂️ Frontend Folder Structure</a></li>
+<li><a href="#figma-design">📐 Figma Design</a></li>
+<li><a href="#internal-use-only">🔒 Internal Use Only</a></li>
+<li><a href="#license">📄 License</a></li>
+</ol>
+<!-- toc-end -->
+<a id="installation" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Installation<a href="#installation" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="prerequisites" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Prerequisites<a href="#prerequisites" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>Make sure you have the following installed on your development machine:</p>
+<ul>
+<li><strong>Node.js</strong>: <code>v18.0.0</code> or later</li>
+<li><strong>npm</strong>: <code>v10.8.1</code></li>
+<li><strong>Android Studio</strong>: <code>v2023.3.1.19</code> (Electric Eel)</li>
+<li><strong>Java</strong>: <code>openjdk 17.0.11</code></li>
+<li><strong>GStreamer</strong>: <code>gstreamer-1.0-android-universal-1.20.6</code></li>
+</ul>
+<a id="steps" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Steps<a href="#steps" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><a id="1-clone-the-repository" class="tsd-anchor"></a><h3 class="tsd-anchor-link">1. <strong>Clone the Repository</strong>:<a href="#1-clone-the-repository" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code>  git clone https://github.com/BotLabDynamics/FlightCore.git
+  cd FlightCore
+</code></pre>
+<a id="2-install-dependencies" class="tsd-anchor"></a><h3 class="tsd-anchor-link">2. Install Dependencies:<a href="#2-install-dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code>  npm install
+</code></pre>
+<a id="3-run-on-android" class="tsd-anchor"></a><h3 class="tsd-anchor-link">3. Run on Android:<a href="#3-run-on-android" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code>  npx react-native run-android
+  npm start
+</code></pre>
+<p><strong><em>Ensure your Android device is connected or an emulator is running.</em></strong></p>
+<a id="usage" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Usage<a href="#usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="basic-usage" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Basic Usage<a href="#basic-usage" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><p>After installation, you can start using the app with the following features:</p>
+<ul>
+<li><strong>🕹️ Real-time Drone Control</strong>: Control quadcopter drones autonomously via a TCP connection with MAVLink 2.0 protocol support.</li>
+<li><strong>🎥 Video Streaming</strong>: Stream both day and thermal camera feeds with video stabilization, zoom functionality, and the ability to switch thermal camera color palettes.</li>
+<li><strong>🗺️ Map Integration</strong>: Track the drone’s location on the map, set waypoints with different map layers, and center the map on objects or the drone’s current location.</li>
+<li><strong>🔋 Battery Monitoring</strong>: Monitor battery levels and trigger failsafe actions when necessary.</li>
+</ul>
+<a id="features" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Features<a href="#features" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><strong>FlightCore 1.1.0</strong> is a powerful ground control system equipped with advanced features for managing and operating quadcopter drones:</p>
+<a id="drone-control-and-telemetry" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Drone Control and Telemetry<a href="#drone-control-and-telemetry" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>🛸 Real-time Drone Telemetry and Control</strong>:
+<ul>
+<li><strong>MAVLink 2.0 Support</strong>: Fully compatible with MAVLink 2.0, enabling secure and efficient communication with a wide range of UAV hardware.</li>
+<li><strong>Autonomous Flight Modes</strong>: Support for autonomous flight modes, including:
+<ul>
+<li><strong>Waypoint Navigation</strong>: Pre-programmed flight paths with precise control over altitude, speed, and route.</li>
+</ul>
+</li>
+<li><strong>Pre-Planned Missions</strong>: Execute complex missions with customizable parameters and real-time adjustments.</li>
+<li><strong>Real-time Telemetry Data</strong>: Display crucial flight data such as altitude, speed, battery voltage, GPS coordinates, and more.</li>
+</ul>
+</li>
+</ul>
+<a id="video-streaming-and-camera-controls" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Video Streaming and Camera Controls<a href="#video-streaming-and-camera-controls" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>📹 High-definition Video Streaming with Advanced Features</strong>:
+<ul>
+<li><strong>Day and Thermal Camera Feeds</strong>: Stream high-definition video from both day and thermal cameras.</li>
+<li><strong>Video Stabilization</strong>: Enhanced stability for smooth video streaming from the day camera.</li>
+<li><strong>Zoom Functionality</strong>: Zoom in on specific areas of interest in both day and thermal feeds.</li>
+<li><strong>Thermal Camera Palette Switching</strong>: Change color palettes on the thermal camera to suit different operational needs.</li>
+</ul>
+</li>
+</ul>
+<a id="heads-up-display-hud-and-map-integration" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Heads-Up Display (HUD) and Map Integration<a href="#heads-up-display-hud-and-map-integration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p><strong>🎛️ Customizable Heads-Up Display (HUD)</strong>:</p>
+<ul>
+<li><strong>Comprehensive Data Display</strong>: View speed, altitude, battery status, GPS status, flight mode, and other critical information in real-time.</li>
+<li><strong>Compass and Artificial Horizon</strong>: Real-time compass and artificial horizon indicators for enhanced navigation.</li>
+</ul>
+</li>
+<li>
+<p><strong>🗺️ Interactive Map with Waypoint Navigation</strong>:</p>
+<ul>
+<li><strong>Multi-layer Map Integration</strong>: Supports various map layers (satellite, terrain, hybrid) for better situational awareness.</li>
+<li><strong>Waypoint Setting</strong>: Easily set, adjust, and manage waypoints with intuitive drag-and-drop functionality.</li>
+<li><strong>Geofencing</strong>: Define virtual boundaries to restrict drone operations within a designated area, ensuring compliance with safety protocols.</li>
+<li><strong>Object and Drone Centering</strong>: Automatically center the map on specific objects or the drone’s current location for easier tracking.</li>
+</ul>
+</li>
+</ul>
+<a id="battery-and-drone-health-monitoring" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Battery and Drone Health Monitoring<a href="#battery-and-drone-health-monitoring" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li>
+<p><strong>🔋 Battery Status Monitoring and Failsafe Triggers</strong>:</p>
+<ul>
+<li><strong>Real-time Battery Monitoring</strong>: Keep track of battery levels with automatic warnings and alerts.</li>
+<li><strong>Failsafe Actions</strong>: Automatic initiation of return-to-home (RTH), landing, or hovering based on battery thresholds.</li>
+</ul>
+</li>
+<li>
+<p><strong>📊 Drone Health Monitoring</strong>:</p>
+<ul>
+<li><strong>CPU and Temperature Monitoring</strong>: Keep tabs on the drone's internal systems, including CPU load and temperature.</li>
+<li><strong>RSSI and Data Rate</strong>: Monitor signal strength (RSSI) and data transmission rates to ensure stable communication.</li>
+<li><strong>Health Alerts</strong>: Receive real-time alerts for any critical issues that could impact flight safety.</li>
+</ul>
+</li>
+</ul>
+<a id="scalability-and-customization" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Scalability and Customization<a href="#scalability-and-customization" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>🏗️ Scalable and Modular Architecture</strong>:
+<ul>
+<li><strong>Modular Plugins</strong>: Add new features or integrations with ease through a modular plugin architecture.</li>
+<li><strong>Custom Drone Profiles</strong>: Save and switch between multiple drone profiles for different UAVs with varying configurations.</li>
+<li><strong>Extensive Settings</strong>: Fine-tune operational parameters, set default configurations, and customize the interface to match specific mission requirements.</li>
+</ul>
+</li>
+</ul>
+<a id="connectivity-and-communication" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Connectivity and Communication<a href="#connectivity-and-communication" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>📡 Advanced Communication Management</strong>:
+<ul>
+<li><strong>TCP/IP and MAVLink 2.0</strong>: Ensure reliable and secure communication with the drone over TCP/IP using the MAVLink 2.0 protocol.</li>
+<li><strong>UDP Multicasting for Video</strong>: Efficiently stream video over UDP multicasting, reducing latency and improving video quality.</li>
+</ul>
+</li>
+</ul>
+<a id="ground-control-system-capabilities" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Ground Control System Capabilities<a href="#ground-control-system-capabilities" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>🛠️ Comprehensive GCS Features</strong>:
+<ul>
+<li><strong>Mission Planning and Execution</strong>: Plan, simulate, and execute missions with detailed control over every aspect of the flight.</li>
+<li><strong>Real-time Collaboration</strong>: Allow multiple operators to monitor and control drone operations simultaneously from different locations.</li>
+</ul>
+</li>
+</ul>
+<a id="version-information" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Version Information<a href="#version-information" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><a id="development-environment" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Development Environment<a href="#development-environment" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>Node.js</strong>: <code>v18.0.0</code> or later</li>
+<li><strong>npm</strong>: <code>v10.8.1</code></li>
+<li><strong>Android Studio</strong>: <code>v2023.3.1.19</code> (Electric Eel)</li>
+<li><strong>Java</strong>: <code>openjdk 17.0.11</code></li>
+<li><strong>GStreamer</strong>: <code>gstreamer-1.0-android-universal-1.20.6</code></li>
+</ul>
+<a id="project-dependencies" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Project Dependencies<a href="#project-dependencies" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>React Native</strong>: <code>v0.73.1</code></li>
+<li><strong>React</strong>: <code>v18.2.0</code></li>
+<li><strong>Kotlin</strong>: <code>v1.8.0</code></li>
+<li><strong>Gradle Build Tools</strong>: <code>v34.0.0</code></li>
+<li><strong>NDK Version</strong>: <code>v25.1.8937393</code></li>
+</ul>
+<a id="build-configuration" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Build Configuration<a href="#build-configuration" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><ul>
+<li><strong>Minimum SDK Version</strong>: <code>21</code></li>
+<li><strong>Compile SDK Version</strong>: <code>34</code></li>
+<li><strong>Target SDK Version</strong>: <code>34</code></li>
+<li><strong>Version Code</strong>: <code>1</code></li>
+<li><strong>Version Name</strong>: <code>1.0</code></li>
+</ul>
+<a id="backend-folder-structure" class="tsd-anchor"></a><h3 class="tsd-anchor-link">Backend Folder Structure<a href="#backend-folder-structure" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h3><pre><code class="mermaid">flowchart TB
+    FlightCore(((Flight Core))) ---- android(android)
+    style FlightCore fill:#ffdbdb,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5, font-weight:bold, font-size:16px, color: #000
+    style android fill:#89CFF0,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    FlightCore(Flight Core) ---- ios(ios)
+    style ios fill:#89CFF0,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    subgraph App
+    android(android) ---- app(app)
+    style app fill:#F2C4DE,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    app(app) ---- build(build)
+    style build fill:#F2DEA2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+        subgraph Src
+        app(app) ---- src(src)
+        style src fill:#F2DEA2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+        end
+    app(app) ---- Build(build)
+    style Build fill:#F2DEA2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    app(app) ---- gradle(gradle)
+    style gradle fill:#F2DEA2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    app(app) ---- Gradle(.gradle)
+    style Gradle fill:#F2DEA2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    end
+
+    src(src) --> debug(debug)
+    style debug fill:#F2CDC4,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    subgraph Main
+    src(src) --> main(main)
+    style main fill:#F2CDC4,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    main(main) ---- assets(assets)
+    style assets fill:#FAEBD7,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    main(main) ---- java(java)
+    style java fill:#FAEBD7,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    main(main) ---- res(res)
+    style res fill:#FAEBD7,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+    end
+
+    java(java) ---- com(com)
+    style com fill:#F4C2C2,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    com(com) ---- flightCore(Flight Core)
+    style flightCore fill:#FF91AF,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    flightCore(Flight Core) ---- communications
+    style communications fill:#FAE7B5,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    subgraph Core
+    flightCore(Flight Core) ---- dependencyLibs
+    style dependencyLibs fill:#FAE7B5,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    dependencyLibs ---- drone
+    style drone fill:#0093AF,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    dependencyLibs ---- Mavlink
+    style Mavlink fill:#0093AF,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    dependencyLibs ---- MAVLInk
+    style MAVLInk fill:#0093AF,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    dependencyLibs ---- model
+    style model fill:#0093AF,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    drone ---- common(common)
+    style common fill:#DE5D83,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+
+    drone ---- variable(variable)
+    style variable fill:#DE5D83,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#fff
+    end
+</code><button type="button">Copy</button></pre>
+
+<pre><code>.
+├── android/                 # Android platform-specific code
+│   ├── app/                 # Main app directory for Android
+│   │   ├── build/           # Build files for the app
+│   │   ├── src/             # Source code for the Android application
+│   │   │   ├── debug/       # Debug-specific configurations
+│   │   │   ├── main/        # Main source set for the Android app
+│   │   │   │   ├── assets/  # Application assets
+│   │   │   │   ├── java/    # Java source code
+│   │   │   │   │   └── com/
+│   │   │   │   │       └── FlightCore/
+│   │   │   │   │           ├── communication/    # Communication-related Java classes
+│   │   │   │   │           ├── dependencyLibs/   # External dependencies and libraries
+│   │   │   │   │           │   ├── drone/
+│   │   │   │   │           │   ├── Mavlink/
+│   │   │   │   │           │   ├── MAVLink/
+│   │   │   │   │           │   └── model/
+│   │   │   │   └── res/    # Resources such as drawable, layout, and values
+│   │   ├── build/          # General build output directory
+│   │   ├── gradle/         # Gradle wrapper and configurations
+│   │   └── .gradle/        # Gradle-related caches and files
+│   └── ...
+├── ios/                    # iOS platform-specific code
+│   └── ...                 # Add iOS-specific folders and files if needed
+</code></pre>
+<a id="frontend-folder-structure" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Frontend Folder Structure<a href="#frontend-folder-structure" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><pre><code class="mermaid">graph TD
+
+    %% Core Structure with Style and Color
+    FlightCore(((Flight Core))) --> Frontend[/Frontend/]
+    style FlightCore fill:#ffdbdb,stroke:#333,stroke-width:2px,stroke-dasharray: 5 5, font-weight:bold, font-size:16px, color: #000
+    style Frontend fill:#37b69d,stroke:#333,stroke-width:2px, font-weight:bold, font-size:14px, color: #000
+
+    Frontend --> src{{src}}
+    style src fill:#cff1fb,stroke:#333,stroke-width:2px,font-weight:bold, font-size:14px, color:#000
+
+    %% Frontend Structure
+    src ---- components([components])
+    style components fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- assets([assets])
+    style assets fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- types([types])
+    style types fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- containers([containers])
+    style containers fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- contexts([contexts])
+    style contexts fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- hooks([hooks])
+    style hooks fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- navigations([navigations])
+    style navigations fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- redux([redux])
+    style redux fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- screens([screens])
+    style screens fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    src ---- utils([utils])
+    style utils fill:#e1bfff,stroke:#333,stroke-width:2px, color:#000
+
+    %% Components Subgraph with Style and Color
+    subgraph Components
+        direction TB
+        components ---- action(action)
+        style action fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- camera(camera)
+        style camera fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- common(common)
+        style common fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- hud(hud)
+        style hud fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- joystick(joystick)
+        style joystick fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- map(map)
+        style map fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- missions(missions)
+        style missions fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- settings(settings)
+        style settings fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- toolbar(toolbar)
+        style toolbar fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        components ---- topbar(topbar)
+        style topbar fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+    end
+
+    %% Assets Subgraph with Style and Color
+    subgraph Assets
+        direction TB
+        assets ---- Icons(Icons)
+        style Icons fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        assets ---- Images(Images)
+        style Images fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+    end
+
+    %% Redux Subgraph with Style and Color
+    subgraph Redux
+        direction TB
+        redux ---- features(features)
+        style features fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        features ---- setting
+        style setting fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+    end
+
+    %% Screens Subgraph with Style and Color
+    subgraph Screens
+        direction TB
+        screens ---- Settings(Settings)
+        style Settings fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+        Settings ---- calibrate
+        style calibrate fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+        calibrate ---- calibrateScreens
+        style calibrateScreens fill:#fcfdcd,stroke:#333,stroke-width:2px, color:#000
+
+        Settings ---- failsafe
+        style failsafe fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+        Settings ---- general
+        style general fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+        Settings ---- media
+        style media fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+        Settings ---- offlineMaps
+        style offlineMaps fill:#d6fbe4,stroke:#333,stroke-width:2px, color:#000
+
+        offlineMaps ---- offlineMapScreens
+        style offlineMapScreens fill:#fcfdcd,stroke:#333,stroke-width:2px, color:#000
+
+    end
+
+    %% Utils Subgraph with Style and Color
+    subgraph Utils
+        direction TB
+        utils ---- utilsRedux(utilsRedux)
+        style utilsRedux fill:#f4c2c2,stroke:#333,stroke-width:2px, color:#000
+
+    end
+</code><button type="button">Copy</button></pre>
+
+<pre><code>  src/                          # Root directory for the source code
+  ├── assets/                   # Static assets like icons and images
+  │   ├── icons/                # Icons
+  │   └── images/               # Images
+  ├── components/               # Reusable UI components
+  │   ├── actions/              # Action-related components
+  │   ├── camera/               # Camera-related components
+  │   ├── common/               # Common reusable components
+  │   ├── hud/                  # HUD-related components
+  │   ├── joystick/             # Joystick-related components
+  │   ├── map/                  # Map-related components
+  │   ├── missions/             # Mission-related components
+  │   ├── settings/             # Settings-related components
+  │   ├── toolbar/              # Toolbar components
+  │   └── topbar/               # Topbar components
+  ├── constants/                # Application-wide constants
+  ├── contexts/                 # React contexts for state management
+  ├── hooks/                    # Custom React hooks
+  ├── navigations/              # Navigation-related files
+  ├── redux/                    # Redux state management
+  │   ├── features/             # Redux slices for different features
+  │   │   └── settings/         # Settings-related Redux slices
+  ├── screens/                  # Application screens
+  │   ├── settings/             # Settings screens
+  │   │   ├── calibrate/        # Calibration settings screens
+  │   │   │   ├── calibrateScreens/  # Calibration sub-screens
+  │   │   ├── failsafe/         # Failsafe settings screens
+  │   │   ├── general/          # General settings screens
+  │   │   ├── media/            # Media settings screens
+  │   │   └── offlineMaps/      # Offline maps settings screens
+  │   │   │   ├── offlineMapScreens/  # Offline maps sub-screens
+  ├── types/                    # TypeScript type definitions
+  ├── utils/                    # Utility functions
+  │   └── redux/                # Redux-specific utilities
+  └── ...                       # Additional root files for global styles, providers, etc.
+</code></pre>
+<a id="figma-design" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Figma Design<a href="#figma-design" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p><a href="https://www.figma.com/design/D2pYcibwZMIcP5ruECXA1K/BOTLABS?node-id=3-3&amp;p=f&amp;m=dev">[FlightCore Figma Design]</a></p>
+<a id="internal-use-only" class="tsd-anchor"></a><h2 class="tsd-anchor-link">Internal Use Only<a href="#internal-use-only" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This application is intended for internal use within <strong>Botlab Dynamics Pvt Ltd</strong>. Unauthorized access or distribution of this software is prohibited. Please ensure that all usage complies with the company’s data security and privacy policies.</p>
+<a id="license" class="tsd-anchor"></a><h2 class="tsd-anchor-link">License<a href="#license" aria-label="Permalink" class="tsd-anchor-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="assets/icons.svg#icon-anchor"></use></svg></a></h2><p>This software is proprietary and owned by <strong>Botlab Dynamics Pvt Ltd</strong>. All rights reserved. For usage inquiries, contact the IDEX Software team.</p>
+</div></div><div class="col-sidebar"><div class="page-menu"><div class="tsd-navigation settings"><details class="tsd-accordion"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>Settings</h3></summary><div class="tsd-accordion-details"><div class="tsd-filter-visibility"><span class="settings-label">Member Visibility</span><ul id="tsd-filter-options"><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li><li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></div><div class="tsd-theme-toggle"><label class="settings-label" for="tsd-theme">Theme</label><select id="tsd-theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div><details open class="tsd-accordion tsd-page-navigation"><summary class="tsd-accordion-summary"><h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><use href="assets/icons.svg#icon-chevronDown"></use></svg>On This Page</h3></summary><div class="tsd-accordion-details"><a href="#🚀-flightcore-110"><span>🚀 <wbr/>Flight<wbr/>Core 1.1.0</span></a><ul><li><a href="#📝-overview"><span>📝 <wbr/>Overview</span></a></li><li><a href="#table-of-contents"><span>Table of <wbr/>Contents</span></a></li><li><a href="#installation"><span>Installation</span></a></li><li><ul><li><a href="#prerequisites"><span>Prerequisites</span></a></li><li><a href="#steps"><span>Steps</span></a></li><li><a href="#1-clone-the-repository"><span>1. <wbr/>Clone the <wbr/>Repository:</span></a></li><li><a href="#2-install-dependencies"><span>2. <wbr/>Install <wbr/>Dependencies:</span></a></li><li><a href="#3-run-on-android"><span>3. <wbr/>Run on <wbr/>Android:</span></a></li></ul></li><li><a href="#usage"><span>Usage</span></a></li><li><ul><li><a href="#basic-usage"><span>Basic <wbr/>Usage</span></a></li></ul></li><li><a href="#features"><span>Features</span></a></li><li><ul><li><a href="#drone-control-and-telemetry"><span>Drone <wbr/>Control and <wbr/>Telemetry</span></a></li><li><a href="#video-streaming-and-camera-controls"><span>Video <wbr/>Streaming and <wbr/>Camera <wbr/>Controls</span></a></li><li><a href="#heads-up-display-hud-and-map-integration"><span>Heads-<wbr/>Up <wbr/>Display (HUD) and <wbr/>Map <wbr/>Integration</span></a></li><li><a href="#battery-and-drone-health-monitoring"><span>Battery and <wbr/>Drone <wbr/>Health <wbr/>Monitoring</span></a></li><li><a href="#scalability-and-customization"><span>Scalability and <wbr/>Customization</span></a></li><li><a href="#connectivity-and-communication"><span>Connectivity and <wbr/>Communication</span></a></li><li><a href="#ground-control-system-capabilities"><span>Ground <wbr/>Control <wbr/>System <wbr/>Capabilities</span></a></li></ul></li><li><a href="#version-information"><span>Version <wbr/>Information</span></a></li><li><ul><li><a href="#development-environment"><span>Development <wbr/>Environment</span></a></li><li><a href="#project-dependencies"><span>Project <wbr/>Dependencies</span></a></li><li><a href="#build-configuration"><span>Build <wbr/>Configuration</span></a></li><li><a href="#backend-folder-structure"><span>Backend <wbr/>Folder <wbr/>Structure</span></a></li></ul></li><li><a href="#frontend-folder-structure"><span>Frontend <wbr/>Folder <wbr/>Structure</span></a></li><li><a href="#figma-design"><span>Figma <wbr/>Design</span></a></li><li><a href="#internal-use-only"><span>Internal <wbr/>Use <wbr/>Only</span></a></li><li><a href="#license"><span>License</span></a></li></ul></div></details></div><div class="site-menu"><nav class="tsd-navigation"><a href="modules.html">FlightCore</a><ul class="tsd-small-nested-navigation" id="tsd-nav-container"><li>Loading...</li></ul></nav></div></div></div><footer><p class="tsd-generator">Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></footer><div class="overlay"></div></body></html>
